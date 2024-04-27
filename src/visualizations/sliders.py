@@ -15,17 +15,7 @@ def get_range_slider(
     return range_slider
 
 
-def color_each_ax(axes: list[list[plt.Axes]]) -> None:
-    for ax_list in axes:
-        for ax in ax_list:
-            ax.tick_params(labelleft=False, labelbottom=False, left=False, bottom=False)
-            for spine in ax.spines.values():
-                spine.set_edgecolor("gray")
-                spine.set_linewidth(2)
-                spine.set_facecolor("lightgray")
-
-
-def plot_sliders():
+def plot_sliders(fig: plt.Axes) -> list[RangeSlider]:
     position_y = 0.37
     step_y = 0.04
     ax = fig.add_axes([0.155, position_y, 0.2, 0.01])
