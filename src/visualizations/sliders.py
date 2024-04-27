@@ -15,7 +15,8 @@ def get_range_slider(
     return range_slider
 
 
-def plot_sliders(fig: plt.Axes) -> list[RangeSlider]:
+def plot_sliders(fig: plt.Figure, ax: plt.Axes) -> list[RangeSlider]:
+    ax.set_title("Settings", y=0.85)
     position_y = 0.37
     step_y = 0.04
     ax = fig.add_axes([0.155, position_y, 0.2, 0.01])
