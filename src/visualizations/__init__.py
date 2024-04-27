@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 
+from src.visualizations.pareto import plot_pareto_with_tangential_line
 from src.visualizations.sliders import plot_sliders
 
 
@@ -18,4 +19,4 @@ def color_each_ax(axes: list[list[plt.Axes]]) -> None:
                 spine.set_facecolor("lightgray")
 
 
-__all__ = ["plot_sliders"]
+__all__ = ["plot_sliders", "plot_pareto_with_tangential_line"]
